@@ -8,8 +8,10 @@ import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import {HttpClientModule} from '@angular/common/http';
+//API da WEB in-Memory
 import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
+//API da WEB in-Memory
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { InMemoryDataService }  from './in-memory-data.service';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService,{dataEncapsulation:false}
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService,{dataEncapsulation:false}
       )
   ],
   providers: [
